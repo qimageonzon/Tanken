@@ -10,12 +10,7 @@ deployment_name = "giles-gpt-4o"
 
 user_prompt = str(input("\n\n\nEnter Prompt: "))
 
-messages = [
-    {
-        "role": "user",
-        "content": user_prompt,
-    }
-]
+messages = [{"role": "user", "content": user_prompt}]
 
 response = client.chat.completions.create(
     model=deployment_name,
